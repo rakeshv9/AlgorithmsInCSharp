@@ -29,9 +29,9 @@ public class BinaryTreeInOrderTraversal
         public void InOrder(Node root, StringBuilder sb){
                 if(root == null)
                     return;
-                InOrderTraversal(root.left);
+                InOrder(root.left, sb);
                 sb.Append(root.key + "->");
-                InOrderTraversal(root.right);
+                InOrder(root.right, sb);
         }
     }
 
