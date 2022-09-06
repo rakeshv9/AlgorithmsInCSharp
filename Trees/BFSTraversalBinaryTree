@@ -13,10 +13,9 @@ public class BFSTraversalBinaryTree
             left = right = null;
         }
     }
+    
     public class BinaryTree 
     {
-        public int key;
-
         //Constructor
         public BinaryTree() { }
 
@@ -28,6 +27,7 @@ public class BFSTraversalBinaryTree
             }
             //Using string builder for efficiency
             StringBuilder sb = new StringBuilder();
+            
             //Need a queue to add nodes in the correct order
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
@@ -80,9 +80,9 @@ public class BFSTraversalBinaryTree
 
         //Call BreadthFirstSearchTraversal function by passing the root node as an argument
         //to traverse the above constructed tree nodes in level by level order.
+        
         BinaryTree btree = new BinaryTree();
         string bfsOrder = btree.BreadthFirstSearchTraversal(root);
-
         Console.WriteLine($"Breadth First Traverl Order is {bfsOrder}");
     }
 }
