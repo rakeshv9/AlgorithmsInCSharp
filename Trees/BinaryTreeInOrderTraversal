@@ -44,7 +44,7 @@ public class BinaryTreeInOrderTraversal
     //          /\
     //        13  1
 
-    //IInOrder Traversal is: 12->7->3->5->13->4->1->9->10
+    //InOrder Traversal is: 12->7->3->5->13->4->1->9->10
 
     public static void Main(string[] args)
     {
@@ -60,7 +60,7 @@ public class BinaryTreeInOrderTraversal
 
         BinaryTree btree = new BinaryTree();
         string inOrder = btree.InOrderTraversal(root);
-
+        //Print inorder traversal
         Console.WriteLine($"InOrder Traversal is: {inOrder}");
     }
 }
