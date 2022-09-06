@@ -45,7 +45,7 @@ public class BinaryTreePreOrderTraversal
     //          /\
     //        13  1
 
-    //Prerder Traversal is: 5->7->12->3->9->4->13->1->10
+    //Preorder Traversal is: 5->7->12->3->9->4->13->1->10
 
     public static void Main(string[] args)
     {
