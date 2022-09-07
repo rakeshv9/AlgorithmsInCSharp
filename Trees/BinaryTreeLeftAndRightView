@@ -1,6 +1,6 @@
 using System.Text;
 
-public class BinaryTreeRightView
+public class BinaryTreeLeftAndRightView
 {
     public class Node
     {
