@@ -30,7 +30,8 @@ public class BinaryTreeLeftAndRightView
                 int size = queue.Count;
                 for(int i=0; i< size; i++){
                     Node currentNode = queue.Dequeue();
-                    //To print left side view of binary tree, you can just chaneg the order of these two if conditions (check right != null condition first)
+                    //You can change the order of adding nodes to the queue to print left or right view
+                    //I am adding left nodes first to the queue, so I can check the last node in my queue size(rightmost node) and add it
                     if(currentNode.left != null){
                         queue.Enqueue(currentNode.left);
                     }
