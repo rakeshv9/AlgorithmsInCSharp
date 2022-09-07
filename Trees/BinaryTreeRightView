@@ -30,6 +30,7 @@ public class BinaryTreeRightView
                 int size = queue.Count;
                 for(int i=0; i< size; i++){
                     Node currentNode = queue.Dequeue();
+                    //To print left side view of binary tree, you can just chaneg the order of these two if conditions (check right != null condition first)
                     if(currentNode.left != null){
                         queue.Enqueue(currentNode.left);
                     }
