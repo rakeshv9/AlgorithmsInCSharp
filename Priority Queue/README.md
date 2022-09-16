@@ -20,19 +20,15 @@ Properties of Priority Queue
         
 -----------------------------------------        
  Time complexity - Arrays
-     Enqueue()     Dequeue()     Peek()
-       O(1)         O(N)          O(N)
+     Enqueue()     Dequeue()     Peek() |   O(1)         O(N)          O(N)
        
   Time complexity - Linked List
-      Push()     Pop()     Peek()
-       O(N)      O(1)        O(1)
+      Push()     Pop()     Peek()        |   O(N)      O(1)        O(1)
     
   Time complexity - Heap
-     Insert()      Remove()     Peek()
-       O(logN)     O(logN)       O(1)
+     Insert()      Remove()     Peek()   |  O(logN)     O(logN)       O(1)
        
    Time complexity - Binary Search Tree
-     Insert()      Remove()     Peek()
-       O(logN)     O(logN)       O(1)
+     Insert()      Remove()     Peek()   | O(logN)     O(logN)       O(1)
        
   Binary Heap is generally preferred for priority queue implementation because heaps provide better performance compared to arrays or LinkedList
