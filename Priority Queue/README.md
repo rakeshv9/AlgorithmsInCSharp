@@ -14,14 +14,15 @@ Properties of Priority Queue
     Find the Largest/Smallest or Peek -> O(1) time complexity
     Remove / Dequeue -> O(logn) time complexity
     
- You can use the following data structures to implement a priority queue. 
-        Arrays,
-        Linked List,
-        Binary Search Tree,
-        Binary Heap,
+ You can use the following data structures to implement a priority queue
+ -----------------------------------------------------------------------
+        Arrays
+        Linked List
+        Binary Search Tree
+        Binary Heap
        
- Time complexity 
- ----------------
+Time complexity 
+----------------
 Arrays
 -------
      Enqueue()     Dequeue()     Peek() |   O(1)         O(N)          O(N)
