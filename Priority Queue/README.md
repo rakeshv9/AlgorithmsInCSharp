@@ -15,10 +15,10 @@ Properties of Priority Queue
     Remove / Dequeue -> O(logn) time complexity
     
  You can use the following data structures to implement a priority queue. 
-        Arrays
-        Linked List
-        Binary Search Tree
-        Binary Heap
+        Arrays,
+        Linked List,
+        Binary Search Tree,
+        Binary Heap,
        
  Time complexity 
  ----------------
