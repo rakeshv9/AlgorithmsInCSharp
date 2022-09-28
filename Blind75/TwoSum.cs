@@ -16,13 +16,16 @@ public class Blind75Questions
       if(nums == null || nums.Length == 0){
         return new int[]{-1, -1};
       }
-      Dictionary<int, int> map = new Dictionary<int, int>();
+      Dictionary<int, int> dict = new Dictionary<int, int>();
       for(int i=0; i< nums.Length; i++){
         int numToFind = target - nums[i];
-        if(map.ContainsKey(numToFind)){
-          return new int[]{map[numToFind], i};
-        }else{
-          map.Add(nums[i], i);
+        //
+        if(dict.ContainsKey(numToFind)){
+          return new int[]{dict[numToFind], i};
+        }
+        //Do not add duplicate keys
+        if(!dict.ContainsKey(nums[i])){
+          dict.Add(nums[i], i);
         }
       }
         return new int[]{-1, -1};
@@ -30,7 +33,7 @@ public class Blind75Questions
    
     public static void Main(string[] args)
     {
-        int[] numbers = new int[]{3,2,4,5,9,7};
+        int[] numbers = new int[]{1,1,1,1,1,4,1,1,1,1,1,7,1,1,1,1,1};
         Blind75Questions obj = new Blind75Questions();
 
         int[] indices = obj.TwoSum(numbers, 11);
