@@ -1,0 +1,88 @@
+using System.Text;
+
+public class BFSTraversalBinaryTree
+{
+    public class Node
+    {
+        public int key;
+        public Node left, right;
+
+        public Node(int item)
+        {
+            key = item;
+            left = right = null;
+        }
+    }
+    public class BinaryTree 
+    {
+        public int key;
+
+        //Constructor
+        public BinaryTree() { }
+
+        public string BreadthFirstSearchTraversal(Node root)
+        {
+            if(root == null)
+            {
+                return string.Empty;
+            }
+            //Using string builder for efficiency
+            StringBuilder sb = new StringBuilder();
+            //Need a queue to add nodes in the correct order
+            Queue<Node> queue = new Queue<Node>();
+            queue.Enqueue(root);
+
+            //While loop runs until the queue becomes empty
+            while(queue.Count > 0)
+            {
+                Node node = queue.Dequeue();
+                if(node != null)
+                {
+                    sb.Append(node.key + "->");
+                    //Add left node to the queue, if exists
+                    if(node.left != null)
+                    {
+                        queue.Enqueue(node.left);
+                    }
+                    //Add right node to the queue, if exists
+                    if(node.right != null)
+                    {
+                        queue.Enqueue(node.right);
+                    }
+                }
+            }
+            return sb.ToString();
+        }
+    }
+
+    //Binary Tree Construction using Node class
+    //        5
+    //       / \
+    //      7    9
+    //     /\    /\
+    //   12  3  4  10
+    //          /\
+    //        13  1
+
+    //BFS Traversal on the above binary tree will be = 5 -> 7 -> 9 -> 12 -> 3 -> 4 -> 10 -> 13 -> 1
+
+    public static void Main(string[] args)
+    {
+        Node root = new Node(5);
+        root.left = new Node(7);
+        root.right = new Node(9);
+        root.left.left = new Node(12);
+        root.left.right = new Node(3);
+        root.right.left = new Node(4);
+        root.right.right = new Node(10);
+        root.right.left.left = new Node(13);
+        root.right.left.right = new Node(1);
+
+        //Call BreadthFirstSearchTraversal function by passing the root node as an argument
+        //to traverse the above constructed tree nodes in level by level order.
+        BinaryTree btree = new BinaryTree();
+        string bfsOrder = btree.BreadthFirstSearchTraversal(root);
+
+        Console.WriteLine($"Breadth First Traverl Order is {bfsOrder}");
+    }
+}
