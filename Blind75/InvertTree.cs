@@ -18,6 +18,7 @@ public class Blind75Questions
           this.right = right;
       }
   }
+  //Iterative Version
     public TreeNode InvertTree(TreeNode root) {
         if(root == null)
             return root;
@@ -37,6 +38,20 @@ public class Blind75Questions
         }
         return root;
     }
+ 
+  //Recursive Version
+     public TreeNode InvertTree(TreeNode root) {
+        if(root == null)
+            return root;
+        TreeNode left = InvertTree(root.left);
+        TreeNode right = InvertTree(root.right);
+        root.left = right;
+        root.right = left;
+        return root;
+    }
+ 
+ 
+ 
      public static void Main(string[] args)
     {
       Blind75Questions obj = new Blind75Questions();
