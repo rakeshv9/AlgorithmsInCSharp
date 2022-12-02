@@ -2,25 +2,25 @@ Sorting Algorithms for Coding Interviews
 
 Why sorting is important?
 
-	Easy to search and retrieve data from datasets.
-	Its' very easy to analyze sorted data.
+Easy to search and retrieve data from datasets.
+Its' very easy to analyze sorted data.
 
 Differnt types of sorting algorithms 
 ---------------------------------
 Simple sorting algorithms
-  	Bubble sort, 
- 	Insertion sort, 
-  	Selection sort 
+  Bubble sort, 
+  Insertion sort, 
+  Selection sort 
 ---------------------------------
 Efficient sorting algorithms
-	Merge Sort, 
-	Heap Sort, 
-	Quick sort
+  Merge Sort, 
+  Heap Sort, 
+  Quick sort
 ---------------------------------
 Non-comparision sorting algorithms
-Radix sort, 
-Count sort, 
-Bucket sort
+ Radix sort, 
+ Count sort, 
+ Bucket sort
 
 Bubble sort, selection sort, insertion sorts take 
 	O(n2) time complexity.
