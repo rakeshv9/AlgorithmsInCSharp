@@ -1,6 +1,7 @@
 //Given an array of integers nums which is sorted in ascending order, and an integer target, 
 //write a function to search target in nums. If target exists, then return its index. Otherwise, return -1
 //--------------------------------------------------------------------------------------------------------
+//Binary Search Algorithm
 
 public class BinarySearchImplementation
 {  
@@ -19,9 +20,11 @@ public class BinarySearchImplementation
                     return mid;
                 }
                 else if(target > nums[mid]){
-                    left = mid  + 1; //we need to search on the right side of mid, so adjust left position
+                    //we need to search on the right side of mid, so adjust left position
+                    left = mid  + 1; 
                 }
-                else{ //we need to search on the left side of the mid, so adjust right position
+                else{ 
+                    //we need to search on the left side of the mid, so adjust right position
                     right = mid - 1;
                 }
             }
